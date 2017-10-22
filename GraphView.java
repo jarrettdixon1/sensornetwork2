@@ -59,7 +59,7 @@ public class GraphView extends JPanel{
 //		}
 //		// Draw edges in path
 		for(int i =0; i<spath.size()-1; i++ ){
-			System.out.println("test");
+			
 			int x = vertices[spath.get(i)].getx();
 			double xprime = (double)x*700/(double)graph.cols;
 			
