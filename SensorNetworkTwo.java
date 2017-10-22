@@ -41,19 +41,19 @@ public class SensorNetworkTwo  extends JFrame{
 		do{
 
 			System.out.println("Enter width: ");
-			int width = 100;//input.nextInt();
+			int width = input.nextInt();
 			System.out.println("Enter height: ");
-			int height =  100;//input.nextInt();
+			int height = input.nextInt();
 			System.out.println("Enter number of nodes: ");
-			int nVerts = 20;//input.nextInt();
+			int nVerts = input.nextInt();
 			System.out.println("Enter transmission range: ");
-			int range = 30;//input.nextInt();
+			int range = input.nextInt();
 			System.out.println("Enter the number of Data Generating Nodes");
-			int p = 10;//input.nextInt();// p stands for number of data generating Nodes
+			int p = input.nextInt();// p stands for number of data generating Nodes
 			System.out.println("Enter the number of data packets each Data Generating Node has");
-			int q = 10;//input.nextInt();
+			int q = input.nextInt();
 			System.out.println("Enter the number of data packets each Storage Node can store");
-			int m = 40;//input.nextInt();
+			int m = input.nextInt();
 			int DG = 0;
 			int SN = 0;
 
