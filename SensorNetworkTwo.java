@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -42,18 +44,25 @@ public class SensorNetworkTwo  extends JFrame{
 
 			System.out.println("Enter width: ");
 			int width = input.nextInt();
+			System.out.println(width);
 			System.out.println("Enter height: ");
 			int height = input.nextInt();
+			System.out.println(height);
 			System.out.println("Enter number of nodes: ");
 			int nVerts = input.nextInt();
+			System.out.println(nVerts);
 			System.out.println("Enter transmission range: ");
 			int range = input.nextInt();
+			System.out.println(range);
 			System.out.println("Enter the number of Data Generating Nodes");
 			int p = input.nextInt();// p stands for number of data generating Nodes
+			System.out.println(p);
 			System.out.println("Enter the number of data packets each Data Generating Node has");
 			int q = input.nextInt();
+			System.out.println(q);
 			System.out.println("Enter the number of data packets each Storage Node can store");
 			int m = input.nextInt();
+			System.out.println(m);
 			int DG = 0;
 			int SN = 0;
 
@@ -96,6 +105,7 @@ public class SensorNetworkTwo  extends JFrame{
 					DGs.add(temp);
 
 				}
+				Collections.sort(DGs);
 //				System.out.print("DG's : ");
 //				for(int i = 0; i<DGs.size();i++){
 //					System.out.print(DGs.get(i)  + " ");
@@ -114,6 +124,14 @@ public class SensorNetworkTwo  extends JFrame{
 						System.out.print(DGs.get(i)  + " ");
 					}
 					System.out.println();
+					
+					JFrame frame = new SensorNetworkTwo();
+					frame.setTitle("Nodes");
+					frame.setSize(800,800);
+					frame.setLocationRelativeTo(null);
+					frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+					frame.setVisible(true);
+					
 					System.out.println("Enter Data Generating Node");
 					int source = input.nextInt();
 
@@ -130,11 +148,14 @@ public class SensorNetworkTwo  extends JFrame{
 					//g.printVertexList();
 
 					
+					
+				
 					System.out.print("SN's : ");
 					for(int i = 0; i<SNs.size(); i++){
 						System.out.print(SNs.get(i) + " "	);
 					}
 					System.out.println();
+					
 					System.out.println("Enter Storage Node");
 					int end = input.nextInt();
 					ArrayList<Integer> list = new ArrayList<Integer>();
@@ -143,12 +164,12 @@ public class SensorNetworkTwo  extends JFrame{
 					
 					g.spath = list;
 					
-					JFrame frame = new SensorNetworkTwo();
-					frame.setTitle("Sensor Network Two");
-					frame.setSize(800,800);
-					frame.setLocationRelativeTo(null);
-					frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-					frame.setVisible(true);
+					JFrame frame1 = new SensorNetworkTwo();
+					frame1.setTitle("Path");
+					frame1.setSize(800,800);
+					frame1.setLocationRelativeTo(null);
+					frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+					frame1.setVisible(true);
 					
 					
 
